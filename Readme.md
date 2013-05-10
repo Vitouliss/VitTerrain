@@ -1,4 +1,6 @@
-# VitTerrain (Placeholder name, subjected to change)
+# VitTerrain 
+
+(Placeholder name, subjected to change)
 
 My simple, somewhat procedural terrain generator that I wrote for a school math project. Generates Minecraft-like blocks across the world depending on how . Trees also generate after the map has been done and CAN possibly end up being generated floating irresponsibly. 98% of the time they will generate on Land and aren't able to generate on water. 
 
