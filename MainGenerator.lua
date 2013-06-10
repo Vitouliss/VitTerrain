@@ -10,10 +10,10 @@ April 06, 2012
 
 --]]
 
-local cool = Instance.new("Model", workspace)
-cool.Name = "Land"
+local terrainholder = Instance.new("Model", workspace)
+terrainholder.Name = "Land"
 local number = 0
-local tableOfColors = {BrickColor.new("Bright green"),BrickColor.new("Cool yellow"),BrickColor.new("Dark green")}
+local tableOfColors = {BrickColor.new("Bright green"),BrickColor.new("terrainholder yellow"),BrickColor.new("Dark green")}
 local treegroup = game.Lighting.GroupTrees
 
 local smooth = script.IsSmooth.Value 
@@ -22,7 +22,7 @@ local treestuff = {"Tree1","Tree2","Tree3","Tree4","Tree5"}
 
 local lighting = game:GetService("Lighting").GroupTrees:GetChildren()
 
-local spawn = Instance.new("SpawnLocation",cool)
+local spawn = Instance.new("SpawnLocation",terrainholder)
 spawn.Anchored = true
 spawn.Locked = true
 spawn.Duration = 1
@@ -40,7 +40,7 @@ for b = 40,500,40 do
 		--number = number+1
 		--print("Part # "..number)
 
-		local part = Instance.new("Part",cool)
+		local part = Instance.new("Part",terrainholder)
 		part.Name = "TerrainPart"
 		part.Anchored = true
 		part.TopSurface = "Smooth"
@@ -68,7 +68,7 @@ for b = 40,500,40 do
 
 			part.BrickColor = tableOfColors[math.random(1,#tableOfColors)]
 
-			cool:MoveTo(Vector3.new(2,2,2)) --Not using this because it messes with Terrain for some reason
+			terrainholder:MoveTo(Vector3.new(2,2,2)) --Not using this because it messes with Terrain for some reason
 
 			--]]
 			wait(0.1)
@@ -84,7 +84,7 @@ for b = 40,500,40 do
 			if lighting[lol].Name == random then
 				for amount = 1,10 do
 					extra = lighting[lol]:Clone()
-					extra.Parent = cool
+					extra.Parent = terrainholder
 					extra:MoveTo(Vector3.new(math.random(100,240),randomheight,math.random(100,220)))
 				end
 			end
